@@ -477,7 +477,7 @@ makeTextRepelGrobs <- function(
     rot = rot,
     just = c(hj, vj),
     gp = text.gp,
-    name = paste0("text", i)
+    name = sprintf("textrepelgrob%s", i)
   )
 
   x1 <- convertWidth(x - 0.5 * grobWidth(t), "native", TRUE)
@@ -543,7 +543,7 @@ makeTextRepelGrobs <- function(
       y1 = point_pos[2],
       default.units = "native",
       gp = segment.gp,
-      name = paste0("segment", i),
+      name = sprintf("segmentrepelgrob%s", i),
       arrow = arrow
     )
     grobs[["segment"]] <- s

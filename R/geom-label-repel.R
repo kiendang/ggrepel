@@ -350,7 +350,7 @@ makeLabelRepelGrobs <- function(
     y + 2 * (0.5 - vj) * box.padding,
     just = c(hj, vj),
     gp = text.gp,
-    name = paste0("text", i)
+    name = sprintf("textrepelgrob%s", i)
   )
 
   r <- roundrectGrob(
@@ -362,7 +362,7 @@ makeLabelRepelGrobs <- function(
     just = c(hj, vj),
     r = r,
     gp = rect.gp,
-    name = paste0("box", i)
+    name = sprintf("rectrepelgrob%s", i)
   )
 
   x1 <- convertWidth(x - 0.5 * grobWidth(r), "native", TRUE)
@@ -423,7 +423,7 @@ makeLabelRepelGrobs <- function(
       y1 = point_pos[2],
       default.units = "native",
       gp = segment.gp,
-      name = paste0("segment", i),
+      name = sprintf("segmentrepelgrob%s", i),
       arrow = arrow
     )
     grobs[["segment"]] <- s
